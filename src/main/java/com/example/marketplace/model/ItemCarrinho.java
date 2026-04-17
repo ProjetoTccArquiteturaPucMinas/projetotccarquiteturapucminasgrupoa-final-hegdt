@@ -13,7 +13,7 @@ public class ItemCarrinho {
     }
 
     public BigDecimal calcularSubtotal() {
-        return produto.getPreco().multiply(BigDecimal.valueOf(quantidade));
+        return produto.getPreco().multiply(produto.getCategoria().getPercentualDesconto()).multiply(BigDecimal.valueOf(quantidade));
     }
 
     public Produto getProduto() {
